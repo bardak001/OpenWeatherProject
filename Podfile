@@ -8,5 +8,6 @@ target 'OpenWeatherProject' do
   # Pods for OpenWeatherProject
 
 	pod 'SnapKit'
+	pod 'RealmSwift'
 
 end

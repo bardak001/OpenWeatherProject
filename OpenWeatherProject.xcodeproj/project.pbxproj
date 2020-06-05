@@ -9,9 +9,39 @@
 /* Begin PBXBuildFile section */
 		32A4BE4A9E459468D7F6C195 /* Pods_OpenWeatherProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4530BD33CBBAE66C1F09A64C /* Pods_OpenWeatherProject.framework */; };
 		9EE3DD4E2488CFA100BF58C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD4D2488CFA100BF58C7 /* AppDelegate.swift */; };
-		9EE3DD502488CFA100BF58C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD4F2488CFA100BF58C7 /* SceneDelegate.swift */; };
 		9EE3DD572488CFA600BF58C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3DD562488CFA600BF58C7 /* Assets.xcassets */; };
 		9EE3DD5A2488CFA600BF58C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3DD582488CFA600BF58C7 /* LaunchScreen.storyboard */; };
+		9EE3DD672488D3D900BF58C7 /* DefaultServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD662488D3D900BF58C7 /* DefaultServiceLocator.swift */; };
+		9EE3DD692488D3E500BF58C7 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD682488D3E500BF58C7 /* ServiceLocator.swift */; };
+		9EE3DD6B2488D3F100BF58C7 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD6A2488D3F100BF58C7 /* RequestManager.swift */; };
+		9EE3DD702488D48100BF58C7 /* RealmServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD6F2488D48100BF58C7 /* RealmServiceProtocol.swift */; };
+		9EE3DD722488D4EC00BF58C7 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD712488D4EC00BF58C7 /* RealmService.swift */; };
+		9EE3DD742488D4FF00BF58C7 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD732488D4FF00BF58C7 /* MainService.swift */; };
+		9EE3DD762488D51300BF58C7 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD752488D51300BF58C7 /* SearchService.swift */; };
+		9EE3DD782488D5DC00BF58C7 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD772488D5DC00BF58C7 /* SettingsService.swift */; };
+		9EE3DD7B2488DA3200BF58C7 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD7A2488DA3200BF58C7 /* CityModel.swift */; };
+		9EE3DD802488DB5F00BF58C7 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD7F2488DB5F00BF58C7 /* MainAssembler.swift */; };
+		9EE3DD822488DC0D00BF58C7 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD812488DC0D00BF58C7 /* MainPresenter.swift */; };
+		9EE3DD842488DC2900BF58C7 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD832488DC2900BF58C7 /* MainRouter.swift */; };
+		9EE3DD862488DC6900BF58C7 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD852488DC6900BF58C7 /* MainProtocols.swift */; };
+		9EE3DD882488DC7A00BF58C7 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD872488DC7A00BF58C7 /* MainState.swift */; };
+		9EE3DD8C2488DF7300BF58C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD8B2488DF7300BF58C7 /* MainViewController.swift */; };
+		9EE3DD8E2488E2BE00BF58C7 /* SettingsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD8D2488E2BE00BF58C7 /* SettingsAssembler.swift */; };
+		9EE3DD902488E2DA00BF58C7 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD8F2488E2DA00BF58C7 /* SettingsPresenter.swift */; };
+		9EE3DD922488E2E100BF58C7 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD912488E2E100BF58C7 /* SettingsRouter.swift */; };
+		9EE3DD942488E2E900BF58C7 /* SettingsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD932488E2E900BF58C7 /* SettingsProtocols.swift */; };
+		9EE3DD962488E2F200BF58C7 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD952488E2F200BF58C7 /* SettingsState.swift */; };
+		9EE3DD982488E2FF00BF58C7 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD972488E2FF00BF58C7 /* SettingsTableViewController.swift */; };
+		9EE3DD9A2488E34100BF58C7 /* SearchAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD992488E34100BF58C7 /* SearchAssembler.swift */; };
+		9EE3DD9C2488E34900BF58C7 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD9B2488E34900BF58C7 /* SearchPresenter.swift */; };
+		9EE3DD9E2488E35E00BF58C7 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD9D2488E35E00BF58C7 /* SearchRouter.swift */; };
+		9EE3DDA02488E36E00BF58C7 /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD9F2488E36E00BF58C7 /* SearchProtocols.swift */; };
+		9EE3DDA22488E37700BF58C7 /* SearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DDA12488E37700BF58C7 /* SearchState.swift */; };
+		9EE3DDA42488E38600BF58C7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DDA32488E38600BF58C7 /* SearchViewController.swift */; };
+		9EE3DDA72488EFA200BF58C7 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DDA62488EFA200BF58C7 /* MainVC.swift */; };
+		9EE3DDA9248929A100BF58C7 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DDA8248929A100BF58C7 /* TemperatureUnit.swift */; };
+		9EEAF7C124894C38000D5AA0 /* SwitchSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEAF7C024894C38000D5AA0 /* SwitchSettingsTableViewCell.swift */; };
+		9EEAF7C42489769C000D5AA0 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEAF7C32489769C000D5AA0 /* SettingsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +49,40 @@
 		69184EC088DD6D8AFFEF0B19 /* Pods-OpenWeatherProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherProject.debug.xcconfig"; path = "Target Support Files/Pods-OpenWeatherProject/Pods-OpenWeatherProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9EE3DD4A2488CFA100BF58C7 /* OpenWeatherProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE3DD4D2488CFA100BF58C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9EE3DD4F2488CFA100BF58C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9EE3DD562488CFA600BF58C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EE3DD592488CFA600BF58C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EE3DD5B2488CFA600BF58C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EE3DD662488D3D900BF58C7 /* DefaultServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultServiceLocator.swift; sourceTree = "<group>"; };
+		9EE3DD682488D3E500BF58C7 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		9EE3DD6A2488D3F100BF58C7 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		9EE3DD6F2488D48100BF58C7 /* RealmServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceProtocol.swift; sourceTree = "<group>"; };
+		9EE3DD712488D4EC00BF58C7 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		9EE3DD732488D4FF00BF58C7 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		9EE3DD752488D51300BF58C7 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		9EE3DD772488D5DC00BF58C7 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		9EE3DD7A2488DA3200BF58C7 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		9EE3DD7F2488DB5F00BF58C7 /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
+		9EE3DD812488DC0D00BF58C7 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		9EE3DD832488DC2900BF58C7 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		9EE3DD852488DC6900BF58C7 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
+		9EE3DD872488DC7A00BF58C7 /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		9EE3DD8B2488DF7300BF58C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9EE3DD8D2488E2BE00BF58C7 /* SettingsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembler.swift; sourceTree = "<group>"; };
+		9EE3DD8F2488E2DA00BF58C7 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		9EE3DD912488E2E100BF58C7 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		9EE3DD932488E2E900BF58C7 /* SettingsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocols.swift; sourceTree = "<group>"; };
+		9EE3DD952488E2F200BF58C7 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
+		9EE3DD972488E2FF00BF58C7 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		9EE3DD992488E34100BF58C7 /* SearchAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembler.swift; sourceTree = "<group>"; };
+		9EE3DD9B2488E34900BF58C7 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		9EE3DD9D2488E35E00BF58C7 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		9EE3DD9F2488E36E00BF58C7 /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
+		9EE3DDA12488E37700BF58C7 /* SearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchState.swift; sourceTree = "<group>"; };
+		9EE3DDA32488E38600BF58C7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9EE3DDA62488EFA200BF58C7 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		9EE3DDA8248929A100BF58C7 /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
+		9EEAF7C024894C38000D5AA0 /* SwitchSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		9EEAF7C32489769C000D5AA0 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		B6A73F7104DBAFD109ACD127 /* Pods-OpenWeatherProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherProject.release.xcconfig"; path = "Target Support Files/Pods-OpenWeatherProject/Pods-OpenWeatherProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +110,7 @@
 		9EE3DD412488CFA000BF58C7 = {
 			isa = PBXGroup;
 			children = (
+				9EE3DD792488DA1E00BF58C7 /* Models */,
 				9EE3DD622488D04700BF58C7 /* Resources */,
 				9EE3DD612488D02E00BF58C7 /* Source */,
 				9EE3DD4C2488CFA100BF58C7 /* OpenWeatherProject */,
@@ -80,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				9EE3DD4D2488CFA100BF58C7 /* AppDelegate.swift */,
-				9EE3DD4F2488CFA100BF58C7 /* SceneDelegate.swift */,
 				9EE3DD642488D07400BF58C7 /* ServiceLocator */,
 				9EE3DD652488D08200BF58C7 /* PresentationLayer */,
 			);
@@ -106,6 +166,11 @@
 		9EE3DD642488D07400BF58C7 /* ServiceLocator */ = {
 			isa = PBXGroup;
 			children = (
+				9EE3DD662488D3D900BF58C7 /* DefaultServiceLocator.swift */,
+				9EE3DD682488D3E500BF58C7 /* ServiceLocator.swift */,
+				9EE3DD6C2488D40C00BF58C7 /* Manager */,
+				9EE3DD6D2488D41D00BF58C7 /* RealmService */,
+				9EE3DD6E2488D42C00BF58C7 /* Services */,
 			);
 			path = ServiceLocator;
 			sourceTree = "<group>";
@@ -113,8 +178,105 @@
 		9EE3DD652488D08200BF58C7 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9EE3DD7C2488DA6E00BF58C7 /* Main */,
+				9EE3DD7E2488DA7700BF58C7 /* Settings */,
+				9EE3DD7D2488DA7300BF58C7 /* Search */,
 			);
 			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		9EE3DD6C2488D40C00BF58C7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3DD6A2488D3F100BF58C7 /* RequestManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		9EE3DD6D2488D41D00BF58C7 /* RealmService */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3DD6F2488D48100BF58C7 /* RealmServiceProtocol.swift */,
+				9EE3DD712488D4EC00BF58C7 /* RealmService.swift */,
+			);
+			path = RealmService;
+			sourceTree = "<group>";
+		};
+		9EE3DD6E2488D42C00BF58C7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3DD732488D4FF00BF58C7 /* MainService.swift */,
+				9EE3DD772488D5DC00BF58C7 /* SettingsService.swift */,
+				9EE3DD752488D51300BF58C7 /* SearchService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9EE3DD792488DA1E00BF58C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3DD7A2488DA3200BF58C7 /* CityModel.swift */,
+				9EE3DDA8248929A100BF58C7 /* TemperatureUnit.swift */,
+				9EEAF7C32489769C000D5AA0 /* SettingsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9EE3DD7C2488DA6E00BF58C7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3DDA52488EEEA00BF58C7 /* MainVC */,
+				9EE3DD7F2488DB5F00BF58C7 /* MainAssembler.swift */,
+				9EE3DD812488DC0D00BF58C7 /* MainPresenter.swift */,
+				9EE3DD832488DC2900BF58C7 /* MainRouter.swift */,
+				9EE3DD852488DC6900BF58C7 /* MainProtocols.swift */,
+				9EE3DD872488DC7A00BF58C7 /* MainState.swift */,
+				9EE3DD8B2488DF7300BF58C7 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9EE3DD7D2488DA7300BF58C7 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3DD992488E34100BF58C7 /* SearchAssembler.swift */,
+				9EE3DD9B2488E34900BF58C7 /* SearchPresenter.swift */,
+				9EE3DD9D2488E35E00BF58C7 /* SearchRouter.swift */,
+				9EE3DD9F2488E36E00BF58C7 /* SearchProtocols.swift */,
+				9EE3DDA12488E37700BF58C7 /* SearchState.swift */,
+				9EE3DDA32488E38600BF58C7 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9EE3DD7E2488DA7700BF58C7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9EEAF7C224894C4C000D5AA0 /* Cell */,
+				9EE3DD8D2488E2BE00BF58C7 /* SettingsAssembler.swift */,
+				9EE3DD8F2488E2DA00BF58C7 /* SettingsPresenter.swift */,
+				9EE3DD912488E2E100BF58C7 /* SettingsRouter.swift */,
+				9EE3DD932488E2E900BF58C7 /* SettingsProtocols.swift */,
+				9EE3DD952488E2F200BF58C7 /* SettingsState.swift */,
+				9EE3DD972488E2FF00BF58C7 /* SettingsTableViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9EE3DDA52488EEEA00BF58C7 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3DDA62488EFA200BF58C7 /* MainVC.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		9EEAF7C224894C4C000D5AA0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9EEAF7C024894C38000D5AA0 /* SwitchSettingsTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		AB7EE180267F3CC28157F641 /* Frameworks */ = {
@@ -239,8 +401,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE3DD962488E2F200BF58C7 /* SettingsState.swift in Sources */,
+				9EE3DDA72488EFA200BF58C7 /* MainVC.swift in Sources */,
+				9EE3DD882488DC7A00BF58C7 /* MainState.swift in Sources */,
+				9EE3DD8E2488E2BE00BF58C7 /* SettingsAssembler.swift in Sources */,
+				9EE3DDA02488E36E00BF58C7 /* SearchProtocols.swift in Sources */,
+				9EE3DD782488D5DC00BF58C7 /* SettingsService.swift in Sources */,
+				9EE3DD9A2488E34100BF58C7 /* SearchAssembler.swift in Sources */,
+				9EE3DD842488DC2900BF58C7 /* MainRouter.swift in Sources */,
+				9EE3DDA9248929A100BF58C7 /* TemperatureUnit.swift in Sources */,
+				9EEAF7C124894C38000D5AA0 /* SwitchSettingsTableViewCell.swift in Sources */,
+				9EE3DD7B2488DA3200BF58C7 /* CityModel.swift in Sources */,
+				9EE3DD9C2488E34900BF58C7 /* SearchPresenter.swift in Sources */,
+				9EE3DD762488D51300BF58C7 /* SearchService.swift in Sources */,
+				9EE3DD692488D3E500BF58C7 /* ServiceLocator.swift in Sources */,
+				9EE3DD672488D3D900BF58C7 /* DefaultServiceLocator.swift in Sources */,
+				9EE3DD902488E2DA00BF58C7 /* SettingsPresenter.swift in Sources */,
+				9EEAF7C42489769C000D5AA0 /* SettingsModel.swift in Sources */,
+				9EE3DD9E2488E35E00BF58C7 /* SearchRouter.swift in Sources */,
+				9EE3DD922488E2E100BF58C7 /* SettingsRouter.swift in Sources */,
+				9EE3DD8C2488DF7300BF58C7 /* MainViewController.swift in Sources */,
+				9EE3DD802488DB5F00BF58C7 /* MainAssembler.swift in Sources */,
+				9EE3DD822488DC0D00BF58C7 /* MainPresenter.swift in Sources */,
+				9EE3DD862488DC6900BF58C7 /* MainProtocols.swift in Sources */,
+				9EE3DD982488E2FF00BF58C7 /* SettingsTableViewController.swift in Sources */,
+				9EE3DD742488D4FF00BF58C7 /* MainService.swift in Sources */,
+				9EE3DD722488D4EC00BF58C7 /* RealmService.swift in Sources */,
+				9EE3DD942488E2E900BF58C7 /* SettingsProtocols.swift in Sources */,
 				9EE3DD4E2488CFA100BF58C7 /* AppDelegate.swift in Sources */,
-				9EE3DD502488CFA100BF58C7 /* SceneDelegate.swift in Sources */,
+				9EE3DD6B2488D3F100BF58C7 /* RequestManager.swift in Sources */,
+				9EE3DD702488D48100BF58C7 /* RealmServiceProtocol.swift in Sources */,
+				9EE3DDA22488E37700BF58C7 /* SearchState.swift in Sources */,
+				9EE3DDA42488E38600BF58C7 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -362,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
