@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32A4BE4A9E459468D7F6C195 /* Pods_OpenWeatherProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4530BD33CBBAE66C1F09A64C /* Pods_OpenWeatherProject.framework */; };
+		9E4FC5B4248E16F600A36F69 /* ExtensionsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FC5B3248E16F600A36F69 /* ExtensionsUI.swift */; };
 		9EE3DD4E2488CFA100BF58C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3DD4D2488CFA100BF58C7 /* AppDelegate.swift */; };
 		9EE3DD572488CFA600BF58C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3DD562488CFA600BF58C7 /* Assets.xcassets */; };
 		9EE3DD5A2488CFA600BF58C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3DD582488CFA600BF58C7 /* LaunchScreen.storyboard */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		4530BD33CBBAE66C1F09A64C /* Pods_OpenWeatherProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenWeatherProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69184EC088DD6D8AFFEF0B19 /* Pods-OpenWeatherProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherProject.debug.xcconfig"; path = "Target Support Files/Pods-OpenWeatherProject/Pods-OpenWeatherProject.debug.xcconfig"; sourceTree = "<group>"; };
+		9E4FC5B3248E16F600A36F69 /* ExtensionsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsUI.swift; sourceTree = "<group>"; };
 		9EE3DD4A2488CFA100BF58C7 /* OpenWeatherProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE3DD4D2488CFA100BF58C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EE3DD562488CFA600BF58C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,9 +109,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9E4FC5B1248E16C900A36F69 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E4FC5B3248E16F600A36F69 /* ExtensionsUI.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9EE3DD412488CFA000BF58C7 = {
 			isa = PBXGroup;
 			children = (
+				9E4FC5B1248E16C900A36F69 /* Extensions */,
 				9EE3DD792488DA1E00BF58C7 /* Models */,
 				9EE3DD622488D04700BF58C7 /* Resources */,
 				9EE3DD612488D02E00BF58C7 /* Source */,
@@ -430,6 +441,7 @@
 				9EE3DD942488E2E900BF58C7 /* SettingsProtocols.swift in Sources */,
 				9EE3DD4E2488CFA100BF58C7 /* AppDelegate.swift in Sources */,
 				9EE3DD6B2488D3F100BF58C7 /* RequestManager.swift in Sources */,
+				9E4FC5B4248E16F600A36F69 /* ExtensionsUI.swift in Sources */,
 				9EE3DD702488D48100BF58C7 /* RealmServiceProtocol.swift in Sources */,
 				9EE3DDA22488E37700BF58C7 /* SearchState.swift in Sources */,
 				9EE3DDA42488E38600BF58C7 /* SearchViewController.swift in Sources */,

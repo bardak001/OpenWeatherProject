@@ -41,7 +41,8 @@ class SettingsTableViewController: UITableViewController {
         self.temperatureUnit = temperatureUnit
         for i in 0 ..< cityModels.count {
             let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0))
-            let text = cityModels[i].name + "   " + TemperatureConverter.getString(t: cityModels[i].tempKelvin, temperatureUnit: temperatureUnit)
+            let text = cityModels[i].name + "   " + TemperatureConverter.getString(t: cityModels[i].tempKelvin,
+                                                                                   temperatureUnit: temperatureUnit)
             cell?.textLabel?.text = text
         }
     }
@@ -53,15 +54,18 @@ class SettingsTableViewController: UITableViewController {
     // MARK: - Table view data source
 extension SettingsTableViewController {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView,
+                            numberOfRowsInSection section: Int) -> Int {
         return cityModels.count + 1
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         
         if row == cityModels.count,
-            let cell = tableView.dequeueReusableCell(withIdentifier: SwitchSettingsTableViewCell.reuseID, for: indexPath) as? SwitchSettingsTableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: SwitchSettingsTableViewCell.reuseID,
+                                                     for: indexPath) as? SwitchSettingsTableViewCell {
             cell.tempSegmentController.addTarget(self, action: #selector(changeTemp), for: .valueChanged)
             cell.button.addTarget(self, action: #selector(addButtonTouchUpInside), for: .touchUpInside)
             
@@ -76,10 +80,10 @@ extension SettingsTableViewController {
                     }
                 }
             }
-            
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseID,
+                                                     for: indexPath)
             cell.selectionStyle = .none
             let cityModel = cityModels[row]
             if let temperatureUnit = temperatureUnit {
@@ -92,14 +96,23 @@ extension SettingsTableViewController {
         }
         
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+    override func tableView(_ tableView: UITableView,
+                            heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.item {
+        case cityModels.count:
+            return 50
+        default:
+            return 70
+        }
+        
     }
 }
 
 // MARK: - Table view delegate
 extension SettingsTableViewController {
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView,
+                            commit editingStyle: UITableViewCell.EditingStyle,
+                            forRowAt indexPath: IndexPath) {
         guard indexPath.row < cityModels.count else {
             return }
         let cityModel = cityModels[indexPath.row]
@@ -109,7 +122,8 @@ extension SettingsTableViewController {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         })
     }
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+    override func tableView(_ tableView: UITableView,
+                            editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return indexPath.row == cityModels.count ? .none : .delete
     }
 }
@@ -120,7 +134,8 @@ extension SettingsTableViewController: SettingsView {
         guard let temperatureUnit = TemperatureUnit(rawValue: settingsModel.temperatureUnit) else { return }
         self.temperatureUnit = temperatureUnit
         for i in 0 ..< cityModels.count {
-            let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0))
+            let cell = tableView.cellForRow(at: IndexPath(row: i,
+                                                          section: 0))
             let text = cityModels[i].name + "   " + TemperatureConverter.getString(t: cityModels[i].tempKelvin,
                                                                                    temperatureUnit: temperatureUnit)
             cell?.textLabel?.text = text

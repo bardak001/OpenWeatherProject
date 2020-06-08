@@ -24,16 +24,20 @@ class MainViewController: UIPageViewController {
     
     private let addLabel: UILabel = {
         let label = UILabel()
-        label.text = "ДОБАВЬТЕ ГОРОД"
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.text = Constants.addLabelText
+        label.font = Constants.addLabelFont
         return label
     }()
     
     private let settingsButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "settingsButton"), for: .normal)
-        button.setImage(UIImage(named: "settingsButton")?.withRenderingMode(.alwaysTemplate), for: .highlighted)
-        button.addTarget(self, action: #selector(settingsButtonTouchUpInside), for: .touchUpInside)
+        button.setImage(Constants.settingsButtonImage,
+                        for: .normal)
+        button.setImage(Constants.settingsButtonImage?.withRenderingMode(.alwaysTemplate),
+                        for: .highlighted)
+        button.addTarget(self,
+                         action: #selector(settingsButtonTouchUpInside),
+                         for: .touchUpInside)
         return button
     }()
     
@@ -66,9 +70,9 @@ extension MainViewController {
             $0.center.equalToSuperview()
         }
         settingsButton.snp.makeConstraints {
-            $0.trailing.equalToSuperview().offset(-30)
-            $0.bottom.equalToSuperview().offset(-40)
-            $0.width.height.equalTo(20)
+            $0.trailing.equalToSuperview().offset(-Constants.settingsButtonSNPTrailingOffset)
+            $0.bottom.equalToSuperview().offset(-Constants.settingsButtonSNPBottomOffset)
+            $0.width.height.equalTo(Constants.settingsButtonSNPSize)
         }
     }
     //MARK: - @objc functions
@@ -179,6 +183,15 @@ extension MainViewController: UIPageViewControllerDataSource {
 //MARK: - Constants
 extension MainViewController {
     private enum Constants {
+        // add label
+        static let addLabelText = "ДОБАВЬТЕ ГОРОД"
+        static let addLabelFont = UIFont.systemFont(ofSize: 20, weight: .bold)
+        // settings button
+        static let settingsButtonImage = UIImage(named: "settingsButton")
+        static let settingsButtonSNPTrailingOffset: CGFloat = 30
+        static let settingsButtonSNPBottomOffset: CGFloat = 40
+        static let settingsButtonSNPSize: CGFloat = 20
+        
         static let pageIndicatorTintColor = UIColor.lightGray
         static let currentPageIndicatorTintColor = UIColor.red
     }

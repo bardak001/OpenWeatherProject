@@ -14,7 +14,7 @@ import SnapKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let serviceLocator = DefaultServiceLocator()
+    private let serviceLocator = DefaultServiceLocator()
 
     func application( _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
@@ -33,8 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         
         let vc = MainAssembler.createModule(serviceLocator: serviceLocator)
-//        let navigationController = UINavigationController(rootViewController: vc)
-        window.rootViewController = vc //navigationController
+        window.rootViewController = vc
         window.makeKeyAndVisible()
         
         return true

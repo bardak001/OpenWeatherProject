@@ -65,7 +65,8 @@ extension SettingsPresenterImpl {
     }
     
     func changeTemperatureUnit(temperatureUnit: TemperatureUnit) {
-        let newSettingsModel = SettingsModel(type: "", temperatureUnit: temperatureUnit)
+        let newSettingsModel = SettingsModel(type: "",
+                                             temperatureUnit: temperatureUnit)
         realmService.updateSettingsModel(newSettingsModel: newSettingsModel)
         moduleOutput?.changeTemperatureUnit(temperatureUnit: temperatureUnit)
     }

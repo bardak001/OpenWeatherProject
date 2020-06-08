@@ -45,7 +45,8 @@ extension SearchPresenterImpl {
         
         guard realmService.checkHaveCityModel(cityName: cityName) == false else {
             DispatchQueue.main.async {
-                self.view.showAlert(title: "Warning", message: "We have this is city!!!!!")
+                self.view.showAlert(title: "Warning",
+                                    message: "We have this is city!!!!!")
             }
             return
         }
@@ -53,14 +54,16 @@ extension SearchPresenterImpl {
             guard error == nil,
                 let cityModel = cityModel else {
                 DispatchQueue.main.async {
-                    self.view.showAlert(title: "Warning", message: error ?? "error")
+                    self.view.showAlert(title: "Warning",
+                                        message: error ?? "error")
                 }
                 return
             }
             DispatchQueue.main.async {
                 self.realmService.saveCityModel(cityModel: cityModel) { success in
                     guard success else { return }
-                    self.view.showAlert(title: "Save City", message: error ?? "Success")
+                    self.view.showAlert(title: "Save City",
+                                        message: error ?? "Success")
                     self.moduleOutput?.addCityModel(cityModel: cityModel)
                 }
             }

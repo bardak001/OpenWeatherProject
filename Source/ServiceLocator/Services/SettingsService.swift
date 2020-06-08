@@ -21,5 +21,5 @@ class SettingsServiceImpl {
     }
     
 }
-
+//MARK: - Functions
 extension SettingsServiceImpl {}

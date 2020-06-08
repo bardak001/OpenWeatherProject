@@ -30,13 +30,4 @@ extension MainRouterImpl {
                                                 moduleOutput: moduleOutput)
         viewController?.present(vc, animated: true, completion: nil)
     }
-//    func navToSearchModule() {
-//        let vc =  SearchAssembler.createModule(serviceLocator: serviceLocator, moduleOutput: moduleOutput)
-//        let navController = UINavigationController(rootViewController: vc)
-//        viewController?.present(navController,
-//                                animated: true,
-//                                completion: nil)
-////        viewController?.navigationController?.pushViewController(vc,
-////                                                                 animated: true)
-//    }
 }

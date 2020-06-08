@@ -8,37 +8,20 @@
 
 import UIKit
 
-
-
 class MainVC: UIViewController {
     
     private var temperatureUnit: TemperatureUnit?
     
     var cityModel: CityModel?
     
-    private let nameLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = UIColor.black.withAlphaComponent(0.1)
-        label.font = UIFont.systemFont(ofSize: 35, weight: .bold)
-        label.textColor = .white
-        return label
-    }()
+    private let nameLabel = CustomLabel(text: nil,
+                                        fontSize: Constants.nameLabelFontSize)
     
-    private let weatherLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = UIColor.black.withAlphaComponent(0.1)
-        label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
-        label.textColor = .white
-        return label
-    }()
+    private let weatherLabel = CustomLabel(text: nil,
+                                           fontSize: Constants.weatherLabelFontSize)
     
-    private let temperatureLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = UIColor.black.withAlphaComponent(0.1)
-        label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
-        label.textColor = .white
-        return label
-    }()
+    private let temperatureLabel = CustomLabel(text: nil,
+                                           fontSize: Constants.temperatureLabelFontSize)
     
     init(cityModel: CityModel) {
         super.init(nibName: nil,
@@ -47,7 +30,6 @@ class MainVC: UIViewController {
         
         nameLabel.text = cityModel.name
         weatherLabel.text = cityModel.weather
-        setupTemt()
         
         setupUI()
     }
@@ -79,28 +61,31 @@ extension MainVC {
     //MARK: - UI functions
     private func setupUI() {
         view.backgroundColor = .white
+        
         //addsubview
         view.addSubview(nameLabel)
         view.addSubview(weatherLabel)
         view.addSubview(temperatureLabel)
+        
         //make constraint
         nameLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(50)
+            $0.top.equalToSuperview().offset(Constants.nameLabelSNPTopOffset)
             $0.centerX.equalToSuperview()
         }
         weatherLabel.snp.makeConstraints {
-            $0.top.equalTo(nameLabel.snp.bottom).offset(30)
+            $0.top.equalTo(nameLabel.snp.bottom).offset(Constants.weatherLabelSNPTopOffset)
             $0.centerX.equalToSuperview()
         }
         temperatureLabel.snp.makeConstraints {
-            $0.top.equalTo(weatherLabel.snp.bottom).offset(30)
+            $0.top.equalTo(weatherLabel.snp.bottom).offset(Constants.temperatureLabelSNPTopOffset)
             $0.centerX.equalToSuperview()
         }
     }
     //MARK: - @objc functions
     //MARK: - another functions
     private func setupTemt() {
-        guard let temp = cityModel?.tempKelvin, let temperatureUnit = temperatureUnit else { return }
+        guard let temp = cityModel?.tempKelvin,
+            let temperatureUnit = temperatureUnit else { return }
         temperatureLabel.text = TemperatureConverter.getString(t: temp,
                                                                temperatureUnit: temperatureUnit)
     }
@@ -108,5 +93,29 @@ extension MainVC {
 
 //MARK: - Constants
 extension MainVC {
-    private enum Constants {}
+    private enum Constants {
+        // labels
+            // font size
+        static let nameLabelFontSize: CGFloat = 35
+        static let weatherLabelFontSize: CGFloat = 25
+        static let temperatureLabelFontSize: CGFloat = 30
+            // snp
+        static let nameLabelSNPTopOffset: CGFloat = 50
+        static let weatherLabelSNPTopOffset: CGFloat = 30
+        static let temperatureLabelSNPTopOffset: CGFloat = 30
+    }
+    
+    private class CustomLabel: UILabel {
+        init(text: String?, fontSize: CGFloat?) {
+            super.init(frame: .zero)
+            self.text = text
+            backgroundColor = UIColor.black.withAlphaComponent(0.1)
+            font = UIFont.systemFont(ofSize: fontSize ?? 16, weight: .bold)
+            textColor = .white
+        }
+        
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
 }

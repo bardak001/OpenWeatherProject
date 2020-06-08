@@ -42,9 +42,9 @@ extension MainPresenterImpl {
     }
     
     func getCityModels() {
-        realmService.getSettings { settingsModel in
-            self.view.setSettingsModel(settingsModel: settingsModel)
-        }
+//        realmService.getSettings { settingsModel in
+//            self.view.setSettingsModel(settingsModel: settingsModel)
+//        }
         realmService.getCityModels { cityModels in
             self.view.setCityModels(cityModels: cityModels)
             for cityModel in cityModels {
@@ -70,6 +70,7 @@ extension MainPresenterImpl: MainModuleOutput {
         getCityModels()
     }
     func changeTemperatureUnit(temperatureUnit: TemperatureUnit) {
-        view.setSettingsModel(settingsModel: SettingsModel(type: "", temperatureUnit: temperatureUnit))
+        view.setSettingsModel(settingsModel: SettingsModel(type: "",
+                                                           temperatureUnit: temperatureUnit))
     }
 }

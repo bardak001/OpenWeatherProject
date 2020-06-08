@@ -21,7 +21,7 @@ class SearchServiceImpl {
     }
     
 }
-
+//MARK: - Functions
 extension SearchServiceImpl {
     func searchForCityName(cityName: String, completion: @escaping (CityModel?, String?) -> Void) {
         let parameters: [String : String] = [
