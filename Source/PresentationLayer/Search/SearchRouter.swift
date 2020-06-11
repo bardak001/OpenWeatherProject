@@ -21,4 +21,9 @@ final class SearchRouterImpl: SearchRouter {
 }
 
 //MARK: - Functions
-extension SearchRouterImpl {}
+extension SearchRouterImpl {
+    func dismiss() {
+        viewController?.dismiss(animated: true,
+                                completion: nil)
+    }
+}

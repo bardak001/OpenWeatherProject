@@ -105,6 +105,7 @@ extension SearchViewController {
     
     @objc private func cancelButtonTouchUpInside() {
         textField.text = nil
+        presenter?.cancel()
     }
     //MARK: - another functions
 }

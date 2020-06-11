@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if (oldSchemaVersion < schemaVersion) {
                 }
         })
-
+        
         Realm.Configuration.defaultConfiguration = config
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.backgroundColor = .white

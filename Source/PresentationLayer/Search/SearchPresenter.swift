@@ -62,11 +62,15 @@ extension SearchPresenterImpl {
             DispatchQueue.main.async {
                 self.realmService.saveCityModel(cityModel: cityModel) { success in
                     guard success else { return }
-                    self.view.showAlert(title: "Save City",
-                                        message: error ?? "Success")
+//                    self.view.showAlert(title: "Save City",
+//                                        message: error ?? "Success")
                     self.moduleOutput?.addCityModel(cityModel: cityModel)
+                    self.router.dismiss()
                 }
             }
         }
+    }
+    func cancel() {
+        router.dismiss()
     }
 }

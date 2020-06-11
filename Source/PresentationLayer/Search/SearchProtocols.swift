@@ -10,10 +10,13 @@ import UIKit
 
 protocol SearchPresenter: AnyObject {
     func searchCity(cityName: String?)
+    func cancel()
 }
 
 protocol SearchView: AnyObject {
     func showAlert(title: String, message: String)
 }
 
-protocol SearchRouter {}
+protocol SearchRouter {
+    func dismiss()
+}
